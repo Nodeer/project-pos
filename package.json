@@ -1,0 +1,30 @@
+{
+  "name": "pos",
+  "version": "0.0.1",
+  "description": "This is application point of sale name code project-pos",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron .",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanomthai/project-pos.git"
+  },
+  "keywords": [
+    "pos",
+    "point-of-sale",
+    "electron",
+    "nodejs",
+    "mysql"
+  ],
+  "author": "Taweechai Yuenyang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kanomthai/project-pos/issues"
+  },
+  "homepage": "https://github.com/kanomthai/project-pos#readme",
+  "dependencies": {
+    "electron-prebuilt": "^1.2.6"
+  }
+}
