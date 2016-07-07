@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers','ng-polymer-elements']
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -68,7 +68,16 @@ angular.module('starter', ['ionic', 'starter.controllers','ng-polymer-elements']
         controller: 'PlaylistCtrl'
       }
     }
+  })
+  .state('app.login', {
+    url: '/login',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/logon/logon.html',
+        controller: 'PlaylistCtrl'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/login');
 });

@@ -46,9 +46,9 @@ angular.module('starter.controllers', [])
   // First you need to create a connection to the db
   var con = mysql.createConnection({
       host: "localhost",
-      user: "jay",
-      password: "jay",
-      database: "sitepoint"
+      user: "root",
+      password: "",
+      database: "bepos"
     });
 
   con.connect(function(err){
@@ -65,12 +65,12 @@ angular.module('starter.controllers', [])
     // before sending a COM_QUIT packet to the MySQL server.
   });
 
-  con.query('SELECT * FROM employees',function(err,rows){
-      if(err) throw err;
-
-      console.log('Data received from Db:\n');
-      console.log(rows);
-    });
+  // con.query('SELECT * FROM employees',function(err,rows){
+  //     if(err) throw err;
+  //
+  //     console.log('Data received from Db:\n');
+  //     console.log(rows);
+  //   });
 
 })
 .controller('PlaylistCtrl', function($scope, $stateParams) {
