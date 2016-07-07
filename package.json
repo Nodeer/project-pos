@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/kanomthai/project-pos#readme",
   "dependencies": {
-    "electron-prebuilt": "^1.2.6"
+    "electron-prebuilt": "^1.2.6",
+    "serial-number": "^1.2.0"
   }
 }

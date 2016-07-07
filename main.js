@@ -1,14 +1,18 @@
 const electron = require('electron');
+var serialNumber = require('serial-number');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 900, height: 680})
+  mainWindow = new BrowserWindow({width: 1000, height: 980})
   mainWindow.loadURL('file://'+__dirname+'/index.html')
   mainWindow.webContents.openDevTools()
   mainWindow.on('closed', function () {
     mainWindow = null
   })
+  serialNumber(function (err, value) {
+  	console.log(err+':::'+value);
+  });
 }
 app.on('ready', createWindow)
 app.on('window-all-closed', function () {

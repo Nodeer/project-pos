@@ -44,6 +44,10 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 .controller('BrowserCtrl',function($scope, $stateParams){
+  var serialNumber = require('serial-number');
+  serialNumber(function (err, value) {
+  	console.log(err+'--'+value);
+  });
   $scope.txttatol = 0;
   $scope.txttatolx = 0;
   $scope.addtatol = function(txt){
@@ -54,6 +58,7 @@ angular.module('starter.controllers', [])
     }else{
       $scope.txttatolx = parseInt($scope.txttatolx) + y;
     }
+    $scope.txttatol = 0;
   }
   $scope.minustatol = function(txt){
     var x = 1;
@@ -67,6 +72,7 @@ angular.module('starter.controllers', [])
     }else{
       $scope.txttatolx = parseInt($scope.txttatolx) - y;
     }
+    $scope.txttatol = 0;
   }
 })
 ;
