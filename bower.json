@@ -26,6 +26,9 @@
   "dependencies": {
     "ng-polymer-elements": "^0.3.0",
     "iron-elements": "PolymerElements/iron-elements#^1.0.10",
-    "paper-elements": "PolymerElements/paper-elements#^1.0.7"
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "angular-cookies": "^1.5.7",
+    "bootstrap": "^3.3.6",
+    "angular-material": "^1.0.9"
   }
 }

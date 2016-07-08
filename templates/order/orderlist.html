@@ -1,0 +1,44 @@
+<ion-view view-title="รายการสั่งซื้อ">
+  <ion-content>
+    <div class="bar bar-header item-input-inset fixed-top">
+      <label class="item-input-wrapper">
+        <input type="search" placeholder="ค้นหา" ng-model="filtertxt">
+      </label>
+      <paper-icon-button icon="clear" class="error-d" data-ng-click="filtertxt = ''" ng-show="filtertxt"></paper-icon-button>
+      <paper-icon-button icon="search" class="primary-d" data-ng-click="filtertxt = ''" ng-hide="filtertxt"></paper-icon-button>
+    </div>
+    <md-list>
+      <md-list-item class="md-3-line" ng-repeat="n in listaccount | filter:filtertxt">
+        <img src="{{n.avator}}" class="md-avatar" alt="testt" />
+         <div class="md-list-item-text" layout="column">
+           <h4>{{n.order}}</h4>
+           <p>
+             ชื่อลูกค้า:<span class="error">{{n.tername +'-'+n.ordername}}</span>
+           </p>
+           <p>
+             สถานะ:
+             <span class="error" ng-if="n.status == 1">New</span>
+             <span class="warn" ng-if="n.status == 2">Pending</span>
+             <span class="primary" ng-if="n.status == 3">In Progress</span>
+             <span class="info-d" ng-if="n.status == 4">Canceled</span>
+             <span class="success" ng-if="n.status == 5">Completed</span>
+             <span class="warn-d" ng-if="n.status == 6">Invoiced</span>
+             <span class="info" ng-if="n.status == 7">Submitted</span>
+             <span class="error-d" ng-if="n.status == 8">Deleted</span>
+             &nbsp;
+             สถานะการซิงค์:
+             <span class="success" ng-if="n.statuscomplete == 1">&nbsp;ข้อมูลเข้า AX แล้ว</span>
+             <span class="warn-d" ng-if="n.statuscomplete == 0">&nbsp;ข้อมูลยังไม่เข้า AX</span>
+           </p>
+           <p>
+             ประเภทการขาย:<span class="success-d">{{n.statussale}}</span>
+             &nbsp;
+             ยอดรวม:<span class="primary-d">{{n.tatol | currency:''}}</span>
+           </p>
+         </div>
+         <md-divider ng-if="!$last"></md-divider>
+         <paper-icon-button icon="chevron-right" class="error md-secondary" ui-sref="app.orderdetail({orderid:n.id})"></paper-icon-button>
+     </md-list-item>
+    </md-list>
+  </ion-content>
+</ion-view>

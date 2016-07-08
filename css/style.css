@@ -1,1 +1,98 @@
 h1 { color: #636363; }
+.text-center{
+  right:0px;
+  left:0px;
+}
+.po-rt-200{
+  position: absolute;
+  right:20px;
+  top:200px;
+}
+paper-button.fancy {
+  background: green;
+  color: yellow;
+}
+/*primary #19B5FE*/
+
+paper-button.success {
+  background: #03A678;
+  color:#ECF0F1;
+  font-weight: bold;
+}
+paper-button.primary {
+  background: #19B5FE;
+  color:#ECF0F1;
+  font-weight: bold;
+}
+paper-button.info {
+  background: #757D75;
+  color:#ECF0F1;
+  font-weight: bold;
+}
+paper-button.warn {
+  background: #F9690E;
+  color:#ECF0F1;
+  font-weight: bold;
+}
+paper-button.error {
+  background: #8F1D21;
+  color:#ECF0F1;
+  font-weight: bold;
+}
+.fixed-top{
+
+}
+.error {
+  color:#8F1D21;
+  font-weight: bold;
+}
+.error-d {
+  color:#CF000F;
+  font-weight: bold;
+}
+.warn {
+  color:#F9690E;
+  font-weight: bold;
+}
+.warn-d {
+  color:#CA6924;
+  font-weight: bold;
+}
+.info{
+  color:#757D75;
+  font-weight: bold;
+}
+.info-d{
+  color:#95A5A6;
+  font-weight: bold;
+}
+.primary {
+  color:#19B5FE;
+  font-weight: bold;
+}
+.primary-d {
+  color:#003171;
+  font-weight: bold;
+}
+.success {
+  color:#03A678;
+  font-weight: bold;
+}
+.success-d {
+  color:#006442;
+  font-weight: bold;
+}
+.text-warn {
+  color:#F9690E;
+  font-weight: bold;
+}
+paper-button.error {
+  background: #CF000F;
+  color:#ECF0F1;
+  font-weight: bold;
+}
+
+paper-button[disabled],
+paper-button[toggles][active] {
+  background: red;
+}

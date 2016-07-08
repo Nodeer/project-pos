@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','ng-polymer-elements'])
+angular.module('starter', ['ionic', 'starter.controllers','ng-polymer-elements','ngMaterial'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -13,7 +13,6 @@ angular.module('starter', ['ionic', 'starter.controllers','ng-polymer-elements']
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
-
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
@@ -69,12 +68,31 @@ angular.module('starter', ['ionic', 'starter.controllers','ng-polymer-elements']
       }
     }
   })
+  //เมนูสร้างใหม่
   .state('app.login', {
     url: '/login',
     views: {
       'menuContent': {
         templateUrl: 'templates/logon/logon.html',
         controller: 'PlaylistCtrl'
+      }
+    }
+  })
+  .state('app.orderlist', {
+    url: '/orderlist',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/order/orderlist.html',
+        controller: 'OrderCtrl'
+      }
+    }
+  })
+  .state('app.orderdetail', {
+    url: '/app.orderdetail/:orderid',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/order/orderdetail.html',
+        controller: 'OrderDetailCtrl'
       }
     }
   });

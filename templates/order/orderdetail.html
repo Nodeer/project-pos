@@ -1,0 +1,65 @@
+<ion-view view-title="รายการสินค้าในตะกร้า">
+  <ion-content>
+    <br />
+    <div class="row">
+      <div class="col">
+        <div>
+          <md-list>
+            <md-list-item class="md-3-line" ng-repeat="n in listorderdetail"
+            ng-click="opendetail(n.productid,n.productname,n.priceperunit,n.tatol,n.quality)">
+              <div class="md-list-item-text">
+                <h3>{{n.productname}}</h3>
+                <h4>
+                  ราคา/หน่วย:&nbsp;
+                  <span class="error" style="font-weight:bold;">{{n.priceperunit |currency:''}}</span>
+                  &nbsp;บาท
+                </h4>
+                <p>
+                  สินค้า:&nbsp;<span class="error" style="font-weight:bold;">{{n.quality}}</span>&nbsp;
+                  ยอดรวม:&nbsp;<span class="error" style="font-weight:bold;">{{n.tatol | currency:''}}</span>&nbsp;บาท
+                </p>
+              </div>
+              <md-button class="md-secondary" ng-click="removeitem(n.salesorderdetail)" ng-if="item.typehide.length == 4">
+                <i class="icon ion-close-round error text-h1"></i>
+              </md-button>
+              <md-divider></md-divider>
+            </md-list-item>
+          </md-list>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col col-30">
+        <h4>ยอดรวมทั้งหมด:&nbsp;<span class="error" style="font-weight:bold;">{{addpluss() | currency:''}}</span>&nbsp;บาท</h4>
+      </div>
+    </div>
+    <!-- <h1>{{item.typehide.length}}</h1> -->
+    <br /><br />
+  </ion-content>
+  <div class="tabs tabs-icon-top" ng-show="salestype">
+    <a class="tab-item" myclick="ordedetail()">
+      <i class="icon ion-refresh primary"></i>
+      เรียกข้อมูลใหม่
+    </a>
+    <a class="tab-item" myclick="confirmorder()" ng-if="item.typehide.length == 4">
+      <i class="icon ion-checkmark-circled success"></i>
+     บันทึกเข้า AX
+    </a>
+    <a class="tab-item" myclick="delorder()" ng-if="item.typehide.length == 4">
+      <i class="icon ion-trash-a error"></i>
+     ลบใบสั่งซื้อ
+    </a>
+  </div>
+  <div class="tabs tabs-icon-top" ng-hide="salestype">
+    <a class="tab-item" myclick="ordedetail()">
+      <i class="icon ion-refresh primary"></i>
+      เรียกข้อมูลใหม่
+    </a>
+    <a class="tab-item" myclick="delorder()" ng-if="item.typehide.length == 4">
+      <i class="icon ion-trash-a error"></i>
+     ลบใบสั่งซื้อ
+    </a>
+  </div>
+</ion-view>

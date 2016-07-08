@@ -27,7 +27,17 @@
   "dependencies": {
     "electron-debug": "^1.0.1",
     "electron-prebuilt": "^1.2.6",
+    "electron-reload": "^1.0.0",
+    "install": "^0.8.1",
+    "mssql": "^3.3.0",
     "mysql": "^2.11.1",
+    "npm": "^3.10.5",
+    "screen-size": "^1.0.0",
     "serial-number": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-run": "^1.7.1"
   }
 }
