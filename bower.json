@@ -27,6 +27,7 @@
     "ng-polymer-elements": "^0.3.0",
     "iron-elements": "PolymerElements/iron-elements#^1.0.10",
     "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "app-elements": "PolymerElements/app-elements#^0.9.0",
     "angular-cookies": "^1.5.7",
     "bootstrap": "^3.3.6",
     "angular-material": "^1.0.9"
